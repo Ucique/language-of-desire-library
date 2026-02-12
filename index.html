@@ -121,17 +121,39 @@ p{margin:0 0 16px;color:var(--muted)}
 }
 
 .article-view{
+  position:fixed;
+  inset:0;
+  z-index:40;
   display:none;
+  padding:40px 16px;
+  overflow:auto;
+  background:rgba(0,0,0,.68);
+}
+
+.article-view.active{
+  display:block;
 }
 
 .article-wrap{
   max-width:860px;
   margin:0 auto;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
 }
 
-.back-btn{
+.modal-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin:0 0 24px;
+}
+
+.back-btn,
+.modal-close{
   display:inline-block;
-  margin:0 0 28px;
   padding:10px 16px;
   border-radius:10px;
   border:1px solid var(--line);
@@ -139,10 +161,13 @@ p{margin:0 0 16px;color:var(--muted)}
   color:var(--text);
   text-decoration:none;
   font-weight:600;
+  cursor:pointer;
 }
 
 .back-btn:focus-visible,
-.back-btn:hover{
+.back-btn:hover,
+.modal-close:focus-visible,
+.modal-close:hover{
   border-color:var(--gold);
   outline:none;
 }
@@ -182,18 +207,18 @@ p{margin:0 0 16px;color:var(--muted)}
   color:var(--text);
 }
 
-.article a{
+.article-view a{
   color:var(--gold);
   text-decoration:underline;
 }
 
-.article a:hover,
-.article a:focus-visible{
+.article-view a:hover,
+.article-view a:focus-visible{
   color:#e1bb62;
   text-decoration:underline;
 }
 
-.article a.btn{
+.article-view a.btn{
   color:#111;
   text-decoration:none;
 }
@@ -226,9 +251,14 @@ footer{
   color:#888;
 }
 
+body.modal-open{
+  overflow:hidden;
+}
+
 @media(max-width:700px){
   .wrap{padding:38px 18px 80px}
   h1{font-size:36px}
+  .article-wrap{padding:20px}
   .article-body h1{font-size:32px}
   .article-body h2{font-size:26px}
   .article-body h3{font-size:22px}
@@ -312,9 +342,12 @@ footer{
   </div>
 </section>
 
-<section id="article-initiate-intimacy" class="article-view article">
+<section id="article-initiate-intimacy" class="article-view" aria-hidden="true">
   <div class="article-wrap article-body">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <h1>How to Initiate Intimacy Without Awkwardness: A Calm Script That Actually Helps</h1>
 
     <p>There's a specific moment many people recognize.</p>
@@ -523,8 +556,8 @@ footer{
 
     <h2>Optional: A Private Language Resource</h2>
     <p>If you're looking for more language like this—structured, calm, and private—you can explore the full guide here:</p>
-    <p>Language of Desire: <a href="https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy" target="_blank" rel="nofollow sponsored noopener">https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy</a></p>
-    <a class="btn article-cta" href="https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy" target="_blank" rel="nofollow sponsored noopener">Access the Private Guide</a>
+    <p>Language of Desire: <a href="https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy" target="_blank" rel="noopener noreferrer sponsored">https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy</a></p>
+    <a class="btn article-cta" href="https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy" target="_blank" rel="noopener noreferrer sponsored">Access the Private Guide</a>
     <p>Think of it as a personal library of words and frameworks you can return to when you freeze, overthink, or don't want to turn intimacy into a "big talk." Optional. Quiet. Practical.</p>
     <p>No hype—just more support, if you want it.</p>
 
@@ -540,9 +573,12 @@ footer{
   </div>
 </section>
 
-<section id="article-freeze" class="article-view">
+<section id="article-freeze" class="article-view" aria-hidden="true">
   <div class="article-wrap">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <div class="placeholder">
       <h2>What to Say When You Freeze</h2>
       <p>Coming next.</p>
@@ -550,9 +586,12 @@ footer{
   </div>
 </section>
 
-<section id="article-confidence" class="article-view">
+<section id="article-confidence" class="article-view" aria-hidden="true">
   <div class="article-wrap">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <div class="placeholder">
       <h2>Sexual Confidence Isn’t Loud — It’s Clear</h2>
       <p>Coming next.</p>
@@ -560,9 +599,12 @@ footer{
   </div>
 </section>
 
-<section id="article-mismatch" class="article-view">
+<section id="article-mismatch" class="article-view" aria-hidden="true">
   <div class="article-wrap">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <div class="placeholder">
       <h2>When Desire Doesn’t Match</h2>
       <p>Coming next.</p>
@@ -570,9 +612,12 @@ footer{
   </div>
 </section>
 
-<section id="article-boundaries" class="article-view">
+<section id="article-boundaries" class="article-view" aria-hidden="true">
   <div class="article-wrap">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <div class="placeholder">
       <h2>Boundaries That Don’t Kill the Mood</h2>
       <p>Coming next.</p>
@@ -580,9 +625,12 @@ footer{
   </div>
 </section>
 
-<section id="article-starters" class="article-view">
+<section id="article-starters" class="article-view" aria-hidden="true">
   <div class="article-wrap">
-    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="modal-actions">
+      <a class="back-btn" href="#library" data-close-modal="true">Back to Library</a>
+      <button class="modal-close" type="button" data-close-modal="true" aria-label="Close article">Close</button>
+    </div>
     <div class="placeholder">
       <h2>Conversation Starters That Feel Human</h2>
       <p>Coming next.</p>
@@ -598,30 +646,56 @@ Affiliate disclosure. Educational content only. Not medical or therapy advice.
 
 <script>
 (function () {
-  const library = document.getElementById('library-view');
   const articleViews = Array.from(document.querySelectorAll('.article-view'));
 
-  function showRoute() {
-    const hash = window.location.hash || '#library';
-    const target = hash.startsWith('#article-') ? document.querySelector(hash) : null;
-
-    if (target) {
-      library.style.display = 'none';
-      articleViews.forEach((section) => {
-        section.style.display = section === target ? 'block' : 'none';
-      });
-      window.scrollTo(0, 0);
-      return;
-    }
-
-    library.style.display = 'block';
-    articleViews.forEach((section) => {
-      section.style.display = 'none';
-    });
+  function closeModal() {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    renderRoute();
   }
 
-  window.addEventListener('hashchange', showRoute);
-  showRoute();
+  function renderRoute() {
+    const hash = window.location.hash;
+    const target = hash && hash.startsWith('#article-') ? document.querySelector(hash) : null;
+
+    articleViews.forEach((section) => {
+      const active = section === target;
+      section.classList.toggle('active', active);
+      section.setAttribute('aria-hidden', active ? 'false' : 'true');
+    });
+
+    document.body.classList.toggle('modal-open', !!target);
+
+    if (target) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  articleViews.forEach((section) => {
+    section.addEventListener('click', (event) => {
+      if (event.target === section) {
+        closeModal();
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-close-modal="true"]').forEach((el) => {
+    el.addEventListener('click', (event) => {
+      event.preventDefault();
+      closeModal();
+    });
+  });
+
+  window.addEventListener('hashchange', renderRoute);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      const hasOpenModal = articleViews.some((section) => section.classList.contains('active'));
+      if (hasOpenModal) {
+        closeModal();
+      }
+    }
+  });
+
+  renderRoute();
 })();
 </script>
 

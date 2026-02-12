@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Language. Desire. Clarity.</title>
-<meta name="description" content="A visual library of pressure-free intimacy language. Women-first. Consent-based. Real words."/>
+<title>How to Initiate Intimacy Without Awkwardness: Calm Scripts</title>
+<meta name="description" content="Learn how to initiate intimacy without awkwardness using clear, respectful scripts. Reduce pressure, protect consent, and communicate needs confidently."/>
 <link rel="canonical" href="CANONICAL_URL_GOES_HERE"/>
 
 <style>
@@ -26,7 +26,7 @@ body{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:linear-gradient(180deg,#0e0e11,#141419);
   color:var(--text);
-  line-height:1.6;
+  line-height:1.7;
 }
 
 .wrap{max-width:1100px;margin:0 auto;padding:60px 22px 100px}
@@ -36,12 +36,18 @@ h1{
   font-weight:600;
   letter-spacing:-1px;
   margin:0 0 20px;
+  line-height:1.2;
 }
 
 h2{
   font-size:28px;
   font-weight:500;
   margin:0 0 14px;
+  line-height:1.3;
+}
+
+h3{
+  line-height:1.35;
 }
 
 p{margin:0 0 16px;color:var(--muted)}
@@ -65,15 +71,29 @@ p{margin:0 0 16px;color:var(--muted)}
   .grid{grid-template-columns:1fr}
 }
 
+.card-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+  border-radius:20px;
+}
+
+.card-link:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:4px;
+}
+
 .card{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:20px;
   overflow:hidden;
   transition:.25s ease;
+  height:100%;
 }
 
-.card:hover{
+.card-link:hover .card,
+.card-link:focus-visible .card{
   transform:translateY(-6px);
   border-color:var(--gold);
 }
@@ -100,34 +120,70 @@ p{margin:0 0 16px;color:var(--muted)}
   font-size:15px;
 }
 
-.blog{
-  margin-top:120px;
-  max-width:760px;
+.article-view{
+  display:none;
 }
 
-.blog h2{
-  font-size:34px;
+.article-wrap{
+  max-width:860px;
+  margin:0 auto;
 }
 
-.section{
-  margin-bottom:60px;
-}
-
-.script{
-  background:#222228;
-  padding:20px;
-  border-radius:14px;
-  margin:20px 0;
+.back-btn{
+  display:inline-block;
+  margin:0 0 28px;
+  padding:10px 16px;
+  border-radius:10px;
   border:1px solid var(--line);
-  font-style:italic;
+  background:var(--bg-soft);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
 }
 
-.cta{
+.back-btn:focus-visible,
+.back-btn:hover{
+  border-color:var(--gold);
+  outline:none;
+}
+
+.article-body h1{
+  font-size:42px;
+  margin-bottom:24px;
+}
+
+.article-body h2{
+  font-size:31px;
   margin-top:40px;
-  padding:30px;
-  background:linear-gradient(135deg,#1d1d24,#17171c);
-  border-radius:18px;
-  border:1px solid var(--gold);
+  margin-bottom:16px;
+}
+
+.article-body h3{
+  font-size:24px;
+  margin-top:30px;
+  margin-bottom:14px;
+}
+
+.article-body ul{
+  margin:0 0 24px 22px;
+  color:var(--muted);
+}
+
+.article-body li{
+  margin:0 0 10px;
+}
+
+.article-body blockquote{
+  margin:22px 0;
+  padding:18px 20px;
+  border-left:3px solid var(--gold);
+  background:#222228;
+  border-radius:10px;
+  color:var(--text);
+}
+
+.article-cta{
+  margin:22px 0 10px;
 }
 
 .btn{
@@ -141,10 +197,25 @@ p{margin:0 0 16px;color:var(--muted)}
   text-decoration:none;
 }
 
+.placeholder{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:26px;
+}
+
 footer{
   margin-top:100px;
   font-size:13px;
   color:#888;
+}
+
+@media(max-width:700px){
+  .wrap{padding:38px 18px 80px}
+  h1{font-size:36px}
+  .article-body h1{font-size:32px}
+  .article-body h2{font-size:26px}
+  .article-body h3{font-size:22px}
 }
 
 </style>
@@ -154,101 +225,389 @@ footer{
 <body>
 <div class="wrap">
 
-<div class="hero">
-  <h1>When words disappear, intimacy doesn’t have to.</h1>
-  <p>A visual, growing library of pressure-free language for confidence, consent, and connection.</p>
-</div>
-
-<div class="grid">
-
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>How to Initiate Intimacy Without Awkwardness</h3>
-    <p>You want closeness — but not pressure, not silence, not the wrong moment.</p>
+<section id="library-view">
+  <div class="hero">
+    <h1>When words disappear, intimacy doesn’t have to.</h1>
+    <p>A visual, growing library of pressure-free language for confidence, consent, and connection.</p>
   </div>
-</div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>What to Say When You Freeze</h3>
-    <p>When your body knows, but your mouth goes blank.</p>
+  <div class="grid">
+
+    <a class="card-link" href="#article-initiate-intimacy" aria-label="Open article: How to Initiate Intimacy Without Awkwardness">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600" alt="Couple in a close, calm moment"/>
+        <div class="card-content">
+          <h3>How to Initiate Intimacy Without Awkwardness</h3>
+          <p>A calm, reusable structure: Appreciation → Request → Choice.</p>
+        </div>
+      </article>
+    </a>
+
+    <a class="card-link" href="#article-freeze" aria-label="Open article: What to Say When You Freeze">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=1600" alt="Portrait suggesting thoughtful pause"/>
+        <div class="card-content">
+          <h3>What to Say When You Freeze</h3>
+          <p>Coming next.</p>
+        </div>
+      </article>
+    </a>
+
+    <a class="card-link" href="#article-confidence" aria-label="Open article: Sexual Confidence Isn’t Loud — It’s Clear">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1600" alt="Person with composed expression"/>
+        <div class="card-content">
+          <h3>Sexual Confidence Isn’t Loud — It’s Clear</h3>
+          <p>Coming next.</p>
+        </div>
+      </article>
+    </a>
+
+    <a class="card-link" href="#article-mismatch" aria-label="Open article: When Desire Doesn’t Match">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1529634894174-889a7dfdfe2c?q=80&w=1600" alt="Couple standing side by side outdoors"/>
+        <div class="card-content">
+          <h3>When Desire Doesn’t Match</h3>
+          <p>Coming next.</p>
+        </div>
+      </article>
+    </a>
+
+    <a class="card-link" href="#article-boundaries" aria-label="Open article: Boundaries That Don’t Kill the Mood">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1529634894174-889a7dfdfe2c?q=80&w=1600" alt="Two people sharing a reflective moment"/>
+        <div class="card-content">
+          <h3>Boundaries That Don’t Kill the Mood</h3>
+          <p>Coming next.</p>
+        </div>
+      </article>
+    </a>
+
+    <a class="card-link" href="#article-starters" aria-label="Open article: Conversation Starters That Feel Human">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600" alt="Casual conversation between two people"/>
+        <div class="card-content">
+          <h3>Conversation Starters That Feel Human</h3>
+          <p>Coming next.</p>
+        </div>
+      </article>
+    </a>
+
   </div>
-</div>
+</section>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>Sexual Confidence Isn’t Loud — It’s Clear</h3>
-    <p>Confidence isn’t performance. It’s clarity.</p>
+<section id="article-initiate-intimacy" class="article-view">
+  <div class="article-wrap article-body">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <h1>How to Initiate Intimacy Without Awkwardness: A Calm Script That Actually Helps</h1>
+
+    <p>There's a specific moment many people recognize.</p>
+    <p>You're close to your partner—maybe on the couch, maybe getting ready for bed, maybe in the quiet after a long day. You want connection. You want warmth. You want to feel wanted and safe at the same time.</p>
+    <p>And then your mind does that thing:</p>
+    <p><em>What do I say? What if I make it weird? What if they say no? What if I'm "too much"?</em></p>
+    <p>So you say nothing. Or you try to hint. Or you reach for a joke and it lands wrong. Or you wait until you're both exhausted and then feel even more alone.</p>
+    <p>If this is you, you're not broken. You're not "bad at intimacy." You're not too needy, too sensitive, too complicated, or too late.</p>
+    <p>Learning how to initiate intimacy without feeling awkward isn't about becoming more confident or seductive. Most of the time, the problem isn't desire.</p>
+    <p>It's language.</p>
+    <p>It's not having a simple, respectful way to invite intimacy without turning it into pressure—for them or for you.</p>
+    <p>This article gives you exactly that: one calm, reusable structure you can use to initiate intimacy confidently—without explicit language, without performance, and without losing your self-respect if the answer is "not tonight."</p>
+
+    <h2>Why Initiating Intimacy Feels So Awkward (And Why You Freeze)</h2>
+    <p>When people say "I feel awkward initiating," they usually mean something deeper:</p>
+    <ul>
+      <li>"I'm afraid of rejection, and I don't want to feel foolish."</li>
+      <li>"I don't want to pressure them."</li>
+      <li>"I don't want to start a conflict."</li>
+      <li>"I don't know what's appropriate to say."</li>
+      <li>"I don't want to be laughed at."</li>
+      <li>"I don't want to be judged for wanting closeness."</li>
+    </ul>
+    <p>None of that is a libido problem.</p>
+    <p>It's a safety problem—emotional safety.</p>
+    <p>And our culture doesn't exactly teach women (or anyone) how to use clear, kind language about intimacy. Many of us learned that:</p>
+    <ul>
+      <li>wanting closeness is "needy,"</li>
+      <li>asking directly is "embarrassing,"</li>
+      <li>initiating is "not your role,"</li>
+      <li>and confidence means never feeling vulnerable.</li>
+    </ul>
+    <p>But intimacy is vulnerability. There is no way around that.</p>
+    <p>The goal is not to become a person who never feels awkward.</p>
+    <p>The goal is to become a person who can say something true—gently—without collapsing into shame.</p>
+    <p>You deserve language that protects both:</p>
+    <ul>
+      <li>your desire, and</li>
+      <li>your dignity.</li>
+    </ul>
+
+    <h2>How to Initiate Intimacy as a Woman: Understanding Responsive Desire</h2>
+    <p>A lot of women experience desire in a way that's contextual.</p>
+    <p>Not because something is wrong with them—because it's human.</p>
+    <p>Often, desire is less like a lightning bolt and more like a doorway: it opens when the conditions feel right. That can include things like:</p>
+    <ul>
+      <li>emotional closeness</li>
+      <li>feeling respected</li>
+      <li>feeling unrushed</li>
+      <li>feeling attractive enough</li>
+      <li>feeling safe to say yes or no</li>
+      <li>having a little space from stress</li>
+    </ul>
+    <p>This is sometimes called responsive desire—not as a diagnosis, not as a label you have to adopt, but as a normal pattern: desire can respond to connection, affection, and safety.</p>
+    <p>This matters for initiation because it reframes the entire moment.</p>
+    <p>If you believe intimacy should "just happen," initiation feels like a test:</p>
+    <ul>
+      <li>If it's real, they'll know.</li>
+      <li>If I have to say it, it's embarrassing.</li>
+      <li>If I ask and they say no, I'm unwanted.</li>
+    </ul>
+    <p>But when you understand that desire often needs conditions, initiation becomes what it truly is:</p>
+    <p>A small invitation.</p>
+    <p>Not a performance. Not a demand. Not a referendum on your worth.</p>
+    <p>Also: many women were socialized to fear being "too much." Initiation can trigger that old story—especially if you've ever been dismissed, mocked, or made to feel like your wants are inconvenient.</p>
+    <p>So if your body tightens and your mind goes blank, that's not immaturity.</p>
+    <p>That's conditioning.</p>
+    <p>And it can change—by practicing language that is simple and safe.</p>
+
+    <h2>Intimacy Communication Scripts: The Appreciation → Request → Choice Structure</h2>
+    <p>If you want to know how to make the first move in a relationship with warmth and respect, use this structure:</p>
+    <p><strong>Appreciation → Request → Choice</strong></p>
+    <p>It works because it does three important things at once:</p>
+    <ul>
+      <li>It grounds you in connection (not anxiety).</li>
+      <li>It makes a clear ask (no hinting, no guessing).</li>
+      <li>It removes pressure (your partner is allowed to choose).</li>
+    </ul>
+    <p>Here's what it looks like.</p>
+
+    <h3>1) Appreciation (one sentence)</h3>
+    <p>This is not flattery. It's orientation.</p>
+    <p>You're naming what you value right now—so the invitation lands inside warmth instead of tension.</p>
+    <p>Examples:</p>
+    <ul>
+      <li>"I've missed you today."</li>
+      <li>"I really love being close to you."</li>
+      <li>"I feel safe with you when we slow down like this."</li>
+      <li>"I've been thinking about you."</li>
+    </ul>
+    <p>Choose something you can actually mean.</p>
+
+    <h3>2) Request (one sentence)</h3>
+    <p>This is the part most people skip—and then wonder why they feel stuck.</p>
+    <p>Keep it simple and non-explicit. Aim for closeness, not choreography.</p>
+    <p>Examples:</p>
+    <ul>
+      <li>"Would you want to spend a little time being close tonight?"</li>
+      <li>"Would you be open to some quiet, affectionate time together?"</li>
+      <li>"Could we take ten minutes to reconnect before we sleep?"</li>
+      <li>"I'd love to be held for a bit—are you open to that?"</li>
+    </ul>
+    <p>Notice: you're not demanding a specific outcome. You're asking for connection.</p>
+
+    <h3>3) Choice (one sentence)</h3>
+    <p>This is the pressure-release valve.</p>
+    <p>It tells your partner: You're safe with me. You can be honest.</p>
+    <p>Examples:</p>
+    <ul>
+      <li>"And if not tonight, that's okay—just tell me what would feel good for you."</li>
+      <li>"No worries if you're not in the headspace; I'd rather know."</li>
+      <li>"If now isn't good, can we pick a time that is?"</li>
+    </ul>
+    <p>This one line changes everything. It turns initiation from a high-stakes moment into a respectful conversation.</p>
+
+    <h2>What to Say When You Want Intimacy: Complete Scripts</h2>
+    <p>Here are two complete, real-life scripts you can adapt:</p>
+    <p><strong>Script A (simple, everyday):</strong></p>
+    <blockquote>
+      "Hey. I've missed you today. Would you want to spend a little time being close tonight? If you're tired, that's okay—just tell me what would feel good."
+    </blockquote>
+    <p><strong>Script B (for when you're nervous or it's been a while):</strong></p>
+    <blockquote>
+      "This feels a little vulnerable to say, but I want to be closer to you. Would you be open to some affectionate time together? And it's completely okay if tonight isn't the moment—I just don't want to keep holding it in."
+    </blockquote>
+    <p>If you try these and they feel "too formal," that's normal at first. New language often feels scripted until it becomes yours.</p>
+    <p>You're not trying to sound perfect.</p>
+    <p>You're trying to be clear.</p>
+
+    <h2>What to Say When You Freeze: Three Micro-Scripts</h2>
+    <p>Sometimes the full structure feels like too much. You're already overwhelmed. You can barely speak.</p>
+    <p>In those moments, start smaller:</p>
+    <p><strong>Micro-Script 1:</strong></p>
+    <blockquote>
+      "Can we be close for a minute?"
+    </blockquote>
+    <p><strong>Micro-Script 2:</strong></p>
+    <blockquote>
+      "Would you hold me?"
+    </blockquote>
+    <p><strong>Micro-Script 3:</strong></p>
+    <blockquote>
+      "I want to reconnect—can we talk for a second?"
+    </blockquote>
+    <p>These are not lesser versions. These are real initiations.</p>
+    <p>You don't have to be eloquent. You just have to be honest.</p>
+
+    <h2>How to Ask for Intimacy Without Pressure: Why This Protects Both of You</h2>
+    <h3>It reduces pressure immediately</h3>
+    <p>Hints create pressure because they create uncertainty.</p>
+    <p>When your partner can't tell what you want, they may worry that any response will be wrong. That anxiety kills connection fast.</p>
+    <p>Clear language—with a genuine choice—reduces that tension.</p>
+
+    <h3>It makes "no" safer (which makes "yes" more honest)</h3>
+    <p>A consent-friendly relationship is not one where people always say yes.</p>
+    <p>It's one where people can say no without punishment, and yes without fear.</p>
+    <p>When you include a choice, you're doing something powerful:</p>
+    <ul>
+      <li>you're building trust,</li>
+      <li>you're protecting intimacy,</li>
+      <li>and you're making future connection more likely.</li>
+    </ul>
+
+    <h3>It stops the shame spiral after rejection</h3>
+    <p>Many people don't fear "no."</p>
+    <p>They fear what they'll make "no" mean.</p>
+    <p>This structure helps you interpret "not tonight" as information—not a verdict.</p>
+    <p>If your partner says no, you can respond with steadiness:</p>
+    <ul>
+      <li>"Thank you for telling me. Is there a time that would feel better?"</li>
+      <li>"Got it. I still want closeness—would a hug and a few minutes together feel okay?"</li>
+      <li>"Thanks for being honest. I'm here."</li>
+    </ul>
+    <p>You are allowed to want more.</p>
+    <p>You are also allowed to protect yourself from making it a fight.</p>
+
+    <h3>It replaces performance with intimacy</h3>
+    <p>A lot of awkwardness comes from believing you need to be:</p>
+    <ul>
+      <li>seductive,</li>
+      <li>witty,</li>
+      <li>confident in a very specific way.</li>
+    </ul>
+    <p>But what most people actually long for is simpler:</p>
+    <ul>
+      <li>sincerity</li>
+      <li>clarity</li>
+      <li>warmth</li>
+      <li>mutual choice</li>
+    </ul>
+    <p>Clarity is attractive because it's calm. It's adult. It's honest.</p>
+    <p>And it lets both people relax.</p>
+
+    <h2>How to Express Needs Without Fighting: A Gentle Note for the Vulnerable Reader</h2>
+    <p>If you're reading this with a tight throat—because you've tried before and it didn't go well—go slowly.</p>
+    <p>Start smaller than you think you "should."</p>
+    <p>You can initiate intimacy without making it a big conversation. You can invite closeness in a way that respects your nervous system.</p>
+    <p>Even one sentence counts:</p>
+    <ul>
+      <li>"Can we be close for a minute?"</li>
+      <li>"I want to reconnect—can we talk for a second?"</li>
+      <li>"Would you hold me?"</li>
+    </ul>
+    <p>This is not about winning.</p>
+    <p>It's about returning to yourself—without shame.</p>
+
+    <h2>Optional: A Private Language Resource</h2>
+    <p>If you're looking for more language like this—structured, calm, and private—you can explore the full guide here:</p>
+    <p>Language of Desire: https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy</p>
+    <a class="btn article-cta" href="https://2c7bdh48k7nnn3uj11onwquqfo.hop.clickbank.net/?&campaign=article_initiate_intimacy">Access the Private Guide</a>
+    <p>Think of it as a personal library of words and frameworks you can return to when you freeze, overthink, or don't want to turn intimacy into a "big talk." Optional. Quiet. Practical.</p>
+    <p>No hype—just more support, if you want it.</p>
+
+    <h2>Related Articles You Might Find Helpful</h2>
+    <ul>
+      <li><a href="#article-mismatch">When Desire Doesn't Match – How to navigate mismatched libidos without resentment</a></li>
+      <li><a href="#article-boundaries">Boundaries That Don't Kill the Mood – Setting limits while staying connected</a></li>
+      <li><a href="#article-starters">Conversation Starters That Feel Human – Opening difficult talks without scripts feeling forced</a></li>
+    </ul>
+
+    <h2>Disclaimer</h2>
+    <p>This article is educational content only and is not medical advice or therapy. If you're dealing with persistent distress, coercion, or safety concerns in your relationship, consider speaking with a qualified professional in your area.</p>
   </div>
-</div>
+</section>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1529634894174-889a7dfdfe2c?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>When Desire Doesn’t Match</h3>
-    <p>Low desire. Different rhythms. No blame.</p>
+<section id="article-freeze" class="article-view">
+  <div class="article-wrap">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="placeholder">
+      <h2>What to Say When You Freeze</h2>
+      <p>Coming next.</p>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1529634894174-889a7dfdfe2c?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>Boundaries That Don’t Kill the Mood</h3>
-    <p>Clear doesn’t have to be cold.</p>
+<section id="article-confidence" class="article-view">
+  <div class="article-wrap">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="placeholder">
+      <h2>Sexual Confidence Isn’t Loud — It’s Clear</h2>
+      <p>Coming next.</p>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600"/>
-  <div class="card-content">
-    <h3>Conversation Starters That Feel Human</h3>
-    <p>Not porn-talk. Not scripts. Real language.</p>
+<section id="article-mismatch" class="article-view">
+  <div class="article-wrap">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="placeholder">
+      <h2>When Desire Doesn’t Match</h2>
+      <p>Coming next.</p>
+    </div>
   </div>
-</div>
+</section>
 
-</div>
+<section id="article-boundaries" class="article-view">
+  <div class="article-wrap">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="placeholder">
+      <h2>Boundaries That Don’t Kill the Mood</h2>
+      <p>Coming next.</p>
+    </div>
+  </div>
+</section>
 
-<div class="blog">
-
-<h2>How to Initiate Intimacy Without Awkwardness</h2>
-
-<div class="section">
-<p>You want intimacy. You don’t want to make it weird.</p>
-<p>You don’t want to pressure anyone. You don’t want to be rejected. You just want closeness — without the tension that usually comes before it.</p>
-</div>
-
-<div class="section">
-<h3>The Real Friction</h3>
-<p>For many women, desire isn’t spontaneous. It’s responsive. It needs safety, timing, and language.</p>
-<p>The awkwardness usually isn’t about sex. It’s about not knowing what to say.</p>
-</div>
-
-<div class="section">
-<h3>A 3-Sentence Structure</h3>
-<div class="script">
-“I’ve missed feeling close to you lately.<br>
-Could we take some time just for us tonight?<br>
-If it’s not the right moment, tell me what would feel good instead.”
-</div>
-<p>Appreciation. Request. Choice.</p>
-<p>This keeps consent inside the moment. It lowers pressure. It keeps dignity intact.</p>
-</div>
-
-<div class="cta">
-<h3>Want a deeper library of real-world phrasing?</h3>
-<p>If you’re looking for a private adult resource that expands this approach into structured language and guided scenarios, you can explore it here.</p>
-<a class="btn" href="HOPLINK_GOES_HERE">Access the Private Guide</a>
-</div>
-
-</div>
+<section id="article-starters" class="article-view">
+  <div class="article-wrap">
+    <a class="back-btn" href="#library">Back to Library</a>
+    <div class="placeholder">
+      <h2>Conversation Starters That Feel Human</h2>
+      <p>Coming next.</p>
+    </div>
+  </div>
+</section>
 
 <footer>
 Affiliate disclosure. Educational content only. Not medical or therapy advice.
 </footer>
 
 </div>
+
+<script>
+(function () {
+  const library = document.getElementById('library-view');
+  const articleViews = Array.from(document.querySelectorAll('.article-view'));
+
+  function showRoute() {
+    const hash = window.location.hash || '#library';
+    const target = hash.startsWith('#article-') ? document.querySelector(hash) : null;
+
+    if (target) {
+      library.style.display = 'none';
+      articleViews.forEach((section) => {
+        section.style.display = section === target ? 'block' : 'none';
+      });
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    library.style.display = 'block';
+    articleViews.forEach((section) => {
+      section.style.display = 'none';
+    });
+  }
+
+  window.addEventListener('hashchange', showRoute);
+  showRoute();
+})();
+</script>
+
 </body>
 </html>
